@@ -49,7 +49,7 @@
             <div class="form-group has-search">
                
                 <span class="fa fa-search form-control-feedback"></span>
-                <input type="text" class="form-control me-2" placeholder="Search">
+                <input type="text" class="form-control me-2" placeholder="Search" onfocus="SearchFunction(this)" onblur="restSearch(this)">
                 </div>
             
           </div>
@@ -255,15 +255,27 @@
         <div class="col">
           
         </div>
-        <div class="col-md-auto">
+        <div class="col ">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>
             <a href="#" class="fa fa-linkedin"></a>
             <a href="#" class="fa fa-youtube"></a>
             <a href="#" class="fa fa-instagram"></a>
         </div>
-        <div class="col">
-          
+        <div class="col-md-auto ">
+            <form method="post" style="width: 300px; " action="" onSubmit="return validateForm();">
+                
+    
+                <div style="font-size : 18px;color: white; ">Newsletter Subscription</div>
+               
+                
+                
+                <input type="text" class="form-control" id="data_mail" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+               
+                <div style="padding-top:5px;"><input class="btn btn-success " id="button-addon2"  name="skip_Submit" value="SUBSCRIBE" type="submit"/></div>
+                
+                </form>
+        
         </div>
       </div>
 
@@ -278,11 +290,11 @@
             
         </div>
         <div class="col">
-            <div class="input-group  ">
-                <input type="text" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-success " type="button" id="button-addon2">Subscribe</button>
-              </div>
-        </div>
+        <!--   <div class="input-group  ">
+                <input type="text" class="form-control" id="data_mail" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="button-addon2" >
+                <button class="btn btn-success " type="button" id="button-addon2" onSubmit="return validateForm();">Subscribe</button>
+              </div>-->
+             
       </div>
       <div class="row justify-content-center pt-2">
         <div class="col-md-auto my-info align-text-bottom">
